@@ -1,31 +1,37 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "create-block/interactive-links",
-	"version": "0.1.0",
-	"title": "Interactive Links",
-	"category": "text",
-	"icon": "excerpt-view",
-	"description": "A block that allows you to create a link with a title and subtitle.",
-	"attributes": {
-		"linkTitle": {
-			"type": "string",
-			"default": "Link Title"
-		},
-		"linkSubtitle": {
-			"type": "string",
-			"default": "link subtitle"
-		},
-		"linkUrl": {
-			"type": "string",
-			"default": "/"
-		}
-	},
-	"supports": {
-		"html": false
-	},
-	"textdomain": "interactive-links",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/fancylink",
+  "version": "0.1.0",
+  "title": "FancyLink",
+  "category": "text",
+  "icon": "excerpt-view",
+  "description": "A block that allows you to create a link with a title and subtitle.",
+  "attributes": {
+    "linkSubtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p.subtitle",
+      "default": "link subtitle"
+    },
+    "linkUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "default": "/"
+    },
+    "linkTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p.nav-link.h2",
+      "default": "Link Title"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "fancylink",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
 }

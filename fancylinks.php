@@ -1,18 +1,18 @@
 <?php
+
 /**
- * Plugin Name:       Interactive Links
- * Description:       A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.
+ * Plugin Name:       FancyLink
+ * Description:       A simple Gutenberg block that lets you add stylized links to a page in Wordpress.
  * Version:           0.1.0
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Author:            The WordPress Contributors
+ * Author:            Garrett Massey
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       interactive-links
+ * Text Domain:       fancylink
  *
  * @package           create-block
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function interactive_links_interactive_links_block_init() {
+function fancylinks_blocks_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'interactive_links_interactive_links_block_init' );
+add_action( 'init', 'fancylinks_blocks_init' );

@@ -16,8 +16,7 @@ import {useEffect} from "@wordpress/element";
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './style.scss';
-import './editor.scss';
+import './css/theme.scss';
 import metadata from './block.json';
 
 
@@ -35,7 +34,7 @@ const getPages = async () => {
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 registerBlockType(metadata.name, {
-    title: 'Interactive Links',
+    title: 'FancyLink',
     icon: 'excerpt-view',
     category: 'design',
     attributes: {
@@ -43,22 +42,24 @@ registerBlockType(metadata.name, {
             type: 'string',
             source: 'html',
             selector: 'p.nav-link.h2',
+            default: 'Title',
         },
         linkSubtitle: {
             type: 'string',
             source: 'html',
             selector: 'p.subtitle',
+            default: 'subtitle',
         },
         url: {
             type: 'string',
             source: 'attribute',
             selector: 'a',
             attribute: 'href',
+            default: '/',
         },
     },
     edit: (props) => {
         const {
-
             className,
             attributes: {
                 linkTitle,
