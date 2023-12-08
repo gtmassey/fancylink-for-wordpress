@@ -12,4 +12,4 @@ A custom block for Gutenberg that allows you to create a fancy link.
 
 Create small interactive and "fancy" links that can be used in the Wordpress Block Editor. The links are slightly animated on hover.
 
-I will likely never be maintaining this repository, so if you have any issues, please feel free to fork it and make it your own. I just wanted a quick way to create a specific style in the block editor myself.
+I will likely never regularly update this repository, so if you have any issues, please feel free to fork it and make it your own. I just wanted a quick way to create a specific style in the block editor myself.
